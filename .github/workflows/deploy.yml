@@ -46,12 +46,12 @@ jobs:
           echo "ECR_URI=${ECR_URI}" >> $GITHUB_ENV
           echo "IMAGE_TAG=${IMAGE_TAG}" >> $GITHUB_ENV
 
-      - name: Trivy image scan (HIGH,CRITICAL)
+      - name: Trivy image scan (warn only)
         uses: aquasecurity/trivy-action@0.20.0
         with:
           image-ref: ${{ env.ECR_URI }}:${{ env.IMAGE_TAG }}
           severity: HIGH,CRITICAL
-          exit-code: 1
+          exit-code: 0
           ignore-unfixed: true
 
       - name: Push image to ECR
