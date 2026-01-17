@@ -1,6 +1,7 @@
 ## Terraform Setup
 terraform init
-
+terraform validate 
+terraform  plan 
 terraform apply
 
 ## CI/CD Pipeline
