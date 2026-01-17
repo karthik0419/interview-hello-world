@@ -1,5 +1,6 @@
 ## Terraform Setup
 terraform init
+
 terraform apply
 
 ## CI/CD Pipeline
